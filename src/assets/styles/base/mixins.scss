@@ -1,0 +1,26 @@
+@mixin sign {
+  &:before {
+    content: '<';
+    margin: 0 10px;
+  }
+  &:after {
+    content: '>';
+    margin: 0 10px;
+  }
+}
+
+@mixin before-circle {
+  &:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: $light;
+
+  }
+}
+

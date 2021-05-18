@@ -1,0 +1,19 @@
+@keyframes icon-hover {
+  50% {
+    transform: scale(.96);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes rotate {
+
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+

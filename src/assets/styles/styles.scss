@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
+@import 'assets/styles/libs/bootstrap-reboot.min';
+@import 'assets/styles/libs/animate';
+
+@import "assets/styles/title.scss";
+@import "assets/styles/btn.scss";
+
+@import "assets/styles/base/variables";
+@import "assets/styles/base/mixins";
+@import "assets/styles/base/animations";
+
+* {
+  font-family: 'Play', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: $dark;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.container {
+  width: 1140px;
+  margin: 0 auto;
+}
+
+.divider {
+  width: 60px;
+  height: 6px;
+  background-color: $light;
+  margin: 25px auto 0 auto;
+}

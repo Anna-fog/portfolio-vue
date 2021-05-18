@@ -1,0 +1,313 @@
+<template>
+  <section id="spheres" class="spheres">
+    <div class="spheres__circles">
+      <div class="circle-img"><img src="@/assets/img/sphere.png" alt=""></div>
+      <div class="circle-large"></div>
+      <div class="circle-middle"></div>
+      <div class="circle-small"></div>
+    </div>
+    <div class="container">
+      <h2 class="title title_center sign">Spheres</h2>
+      <div class="divider"></div>
+
+      <div class="spheres__wrapper">
+
+        <div class="spheres__column animate__animated animate__fadeInLeft wow" data-wow-duration="1s" data-wow-delay="0.4s">
+          <h3 class="subtitle spheres__column-subtitle">Education</h3>
+          <ul>
+            <li class="spheres__li">
+              <div class="spheres__item">
+                <div class="spheres__item-head">
+                  <div class="spheres__item-icon">
+                    <img src="@/assets/icn/experience/courses.svg" alt="university">
+                  </div>
+                  <h4 class="subtitle subtitle_small">Courses</h4>
+                  <div class="spheres__item-location">
+                    Web-development courses
+                  </div>
+                </div>
+                <ul class="spheres__item-body">
+                  <h5>Udemy:</h5>
+                  <li>- The Complete JavaScript Course. <br> (Jonas Schmedtmann)</li>
+                  <li>- Vue js 2: from beginner to professional. <br>(Bo Andersen)</li>
+                  <li>- Nuxt.js - Vue.js on Steroids <br>(Maximilian Schwarzmüller)</li>
+                  <li>- Full JS course + React. (Ivan Petricheko)</li>
+                  <li>- JavaScript, practical course. (Ivan Petricheko)</li>
+                  <li>- Web Developer. (Ivan Petricheko)</li>
+                  <br>
+                  <h5>It-Academy:</h5>
+                  <li>- Wed design & mobile UI design.</li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="spheres__li">
+              <div class="spheres__item">
+                <div class="spheres__item-head">
+                  <div class="spheres__item-icon">
+                    <img src="@/assets/icn/experience/university.svg" alt="university">
+                  </div>
+                  <h4 class="subtitle subtitle_small">F.Skorina Gomel State University</h4>
+                  <div class="spheres__item-location">
+                    Foreign languages
+                  </div>
+                </div>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+
+        <div class="spheres__column animate__animated animate__fadeInRight wow" data-wow-duration="1s" data-wow-delay="0.4s">
+          <h3 class="subtitle spheres__column-subtitle">Work experience</h3>
+          <ul>
+            <li class="spheres__li">
+              <div class="spheres__item">
+                <div class="spheres__item-head">
+                  <div class="spheres__item-icon">
+                    <img src="@/assets/icn/experience/developer.svg" alt="university">
+                  </div>
+                  <h4 class="subtitle subtitle_small">Front-End Developer</h4>
+                  <div class="spheres__item-location">
+                    Freelance
+                  </div>
+                </div>
+                <ul class="spheres__item-body">
+                  <li>
+                    <a target="_blank" class="spheres__link" href="https://beclever.by/">
+                      - Kids smart club landing page
+                    </a>
+                  </li>
+                  <li>
+                    <a target="_blank" class="spheres__link" href="http://la-salute.3dw.by/">
+                      - European cuisine restaurant website
+                    </a>
+                  </li>
+                  <li>
+                    <a target="_blank" class="spheres__link" href="http://molisana.3dw.by/">
+                      - Promo site for pasta manufacturer
+                    </a>
+                  </li>
+                  <li>
+                    <a target="_blank" class="spheres__link" href="http://perfectfloor.3dw.by/">
+                      - Floor screed landing page
+                    </a>
+                  </li>
+                  <li>
+                    <a target="_blank" class="spheres__link" href="http://pig-game.3dw.by/">
+                      - Pig game (simple JS game)
+                    </a>
+                  </li>
+                  <li>
+                    <a target="_blank" class="spheres__link" href="http://guess-number.3dw.by/">
+                      - Guess my number game (simple JS game)
+                    </a>
+                  </li>
+                  <li>
+                    <a target="_blank" class="spheres__link" href="http://mailbox.3dw.by/">
+                      - Mailbox (Vue.js app)
+                    </a>
+                  </li>
+                  <li>
+                    <a target="_blank" class="spheres__link" href="http://notes-app.3dw.by/">
+                      - Notes app (note making app on Vue.js)
+                    </a>
+                  </li>
+                  <li>
+                    <a target="_blank" class="spheres__link" href="https://www.breegy.com/">
+                      - Charity website and landing page (made on Vue.js)
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="spheres__li">
+              <div class="spheres__item">
+                <div class="spheres__item-head">
+                  <div class="spheres__item-icon">
+                    <img src="@/assets/icn/experience/designer.svg" alt="university">
+                  </div>
+                  <h4 class="subtitle subtitle_small">UI/UX Designer</h4>
+                  <div class="spheres__item-location">
+                    Freelance
+                  </div>
+                </div>
+                <ul class="spheres__item-body">
+                  <li>
+                    <a target="_blank" class="spheres__link" href="https://www.behance.net/gallery/97648161/Infrared-sauna-website-Design-and-development">- Infrared sauna main page</a>
+                  </li>
+                  <li>
+                    <a target="_blank" class="spheres__link" href="https://www.behance.net/gallery/107369135/Restaurant-website">- European cuisine restaurant website</a>
+                  </li>
+                  <li>
+                    <a target="_blank" class="spheres__link" href="https://www.behance.net/gallery/102718681/Kids-smart-club-landing-page-Web-design-development">- Kids smart club landing page</a>
+                  </li>
+                  <li>
+                    <a target="_blank" class="spheres__link" href="https://www.behance.net/gallery/100726849/Website-Remote-control-toys-shop">- Remote control toys shop</a>
+                  </li>
+                  <li>
+                    <a target="_blank" class="spheres__link" href="https://www.behance.net/gallery/104931981/Promo-site-UIUX-development-of-the-main-page">- Promo site for pasta manufacturer</a>
+                  </li>
+                  <li>
+                    <a target="_blank" class="spheres__link" href="https://www.behance.net/gallery/102530429/Customs-clearence-Web-design-development">- Customs clearance landing page</a>
+                  </li>
+                  <li>
+                    <a target="_blank" class="spheres__link" href="http://molisana.3dw.by/">- Promo site for pasta manufacturer</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</template>
+
+<script>
+export default {}
+</script>
+
+<style lang="scss">
+.spheres {
+  padding-top: 80px;
+  padding-bottom: 50px;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  &__wrapper {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(2, 400px);
+    padding: 50px 65px 0 65px;
+    column-gap: 130px;
+  }
+
+  &__column-subtitle {
+    position: relative;
+    padding-left: 35px;
+    &:before {
+      content: '';
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      background: $light;
+      border-radius: 50%;
+      left: -7px;
+      top: 50%;
+      transform: translateY(-50%)
+    }
+  }
+
+  &__li {
+    position: relative;
+    &:after {
+      content: '';
+      position: absolute;
+      width: 1px;
+      height: calc(100% + 16px);
+      top: -16px;
+      left: 0;
+      background: $middle;
+    }
+  }
+
+  &__item {
+    position: relative;
+    &:before {
+      content: '';
+      height: 1px;
+      width: 44px;
+      position: absolute;
+      background-color: $middle;
+      top: 68px;
+    }
+    &-head {
+      padding: 47px 0 0 100px;
+      position: relative;
+    }
+    &-body {
+      padding-left: 43px;
+      margin-top: 12px;
+      margin-bottom: 0;
+    }
+    &-icon {
+      position: absolute;
+      top: 50px;
+      left: 44px;
+      @include before-circle;
+      img {
+        position: absolute;
+        left: 17px;
+        top: 14px;
+      }
+    }
+    &-location {
+      font-size: 14px;
+    }
+    &-body {
+      line-height: 22px;
+    }
+  }
+
+  &__circles {
+    position: relative;
+  }
+
+  &__link {
+    color: $dark;
+    transition: .4s all;
+    &:hover {
+      color: $middle;
+    }
+  }
+}
+
+// Circles
+
+.circle-img {
+  position: absolute;
+  right: 570px;
+  top: 14px;
+
+  img {
+    width: 150px;
+    height: 150px;
+    animation: rotate 10s infinite linear;
+  }
+}
+
+.circle-small {
+  position: absolute;
+  border-radius: 50%;
+  width: 19px;
+  height: 19px;
+  background-color: $middle;
+  left: 445px;
+  top: 50px;
+}
+
+.circle-middle {
+  position: absolute;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: #D2DDE4;
+  left: 525px;
+  top: -7px;
+}
+
+.circle-large {
+  position: absolute;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  background-color: #F2F7FA;
+  left: 620px;
+  top: 100px;
+}
+
+
+</style>

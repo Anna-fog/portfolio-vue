@@ -1,0 +1,36 @@
+.btn {
+  border-radius: 4px;
+  height: 45px;
+  border: none;
+  transition: 0.6s all;
+  &_promo {
+    width: 170px;
+    background-color: $dark;
+    margin-top: 30px;
+    mix-blend-mode: exclusion;
+    letter-spacing: 1.5px;
+    cursor: auto !important;
+    &:hover {
+      background-color: #628398;
+      letter-spacing: 3px;
+    }
+  }
+  &_contacts {
+    border: 1px solid white;
+    background-color: rgba(0, 0, 0, 0);
+    width: 190px;
+    color: white;
+    margin-top: 0;
+    &:hover {
+      border: 1px solid $middle;
+      letter-spacing: 0.06em;
+      color: $middle;
+    }
+  }
+  &:active {
+    outline: none;
+  }
+  &:focus{
+    outline: none;
+  }
+}

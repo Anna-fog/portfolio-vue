@@ -1,0 +1,99 @@
+.title {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 50px;
+  position: relative;
+  margin-bottom: 0;
+  z-index: 1;
+  &_promo {
+    color: white;
+    font-size: 48px;
+    margin-top: 14px;
+  }
+  &-portfolio {
+    color: $light;
+  }
+  &_center {
+    text-align: center;
+  }
+  span {
+    font-size: 28px;
+    color: white;
+  }
+  &_contacts {
+    color: white;
+  }
+}
+.sign {
+  @include sign;
+}
+
+.subtitle {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 0;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 24px;
+  &_promo {
+    color: white;
+    font-size: 16px;
+    letter-spacing: 0.105em;
+  }
+  &_small {
+    margin-bottom: 5px;
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+.circles {
+  &:before {
+    content: url("assets/img/dots.svg");
+    display: block;
+    opacity: 0.14;
+    position: absolute;
+    transform: rotate(90deg);
+    z-index: -1;
+    left: -2.5%;
+  }
+}
+
+.circles-2 {
+  &:after {
+    content: url("assets/img/dots.svg");
+    position: absolute;
+    top: 11px;
+    left: 200px;
+    z-index: 0;
+  }
+  &_skills {
+    position: relative;
+    &:after {
+      top: 9px;
+      left: 330px;
+      transform: rotate(90deg);
+    }
+  }
+  &_prices {
+    position: relative;
+    &:after {
+      right: 445px;
+      left: auto;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
