@@ -7,26 +7,15 @@
       <div class="divider"></div>
       <div class="prices__wrapper">
 
-        <div class="prices__item animate__animated animate__fadeInDown wow" data-wow-duration="1s" data-wow-delay="0.7s">
-          <div class="prices__header">Landing-page</div>
+        <div v-for="(service, i) in services"
+             :key="i"
+             class="prices__item animate__animated animate__fadeInDown wow"
+             data-wow-duration="1s" :data-wow-delay="service.delay"
+        >
+          <div class="prices__header">{{ service.title }}</div>
           <div class="prices__descr">
-            One-page website for the presentation of services / goods / ...
+            {{ service.description }}
           </div>
-        </div>
-
-        <div class="prices__item animate__animated animate__fadeInDown wow" data-wow-duration="1s" data-wow-delay="0.7s">
-          <div class="prices__header">Corporate website</div>
-          <div class="prices__descr">Website for your business or company</div>
-        </div>
-
-        <div class="prices__item animate__animated animate__fadeInUp wow" data-wow-duration="1s" data-wow-delay="0.7s">
-          <div class="prices__header">Web-application</div>
-          <div class="prices__descr">Application inside the browser for better comfort</div>
-        </div>
-
-        <div class="prices__item animate__animated animate__fadeInUp wow" data-wow-duration="1s" data-wow-delay="0.7s">
-          <div class="prices__header">Design</div>
-          <div class="prices__descr">Create a design for your website / application </div>
         </div>
 
       </div>
@@ -35,7 +24,18 @@
 </template>
 
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      services: [
+        { title: 'Landing-page', description: 'One-page website for the presentation of services / goods / ...', delay: '0.4s' },
+        { title: 'Corporate website', description: 'Website for your business or company', delay: '0.5s' },
+        { title: 'Web-application', description: 'Application inside the browser for better comfort', delay: '0.6s' },
+        { title: 'Design', description: 'Create a design for your website / application', delay: '0.7s' },
+      ]
+    }
+  }
+}
 </script>
 
 <style lang="scss">

@@ -2,6 +2,7 @@
   <div id="nav">
   </div>
   <router-view/>
+
   <side-panel></side-panel>
   <app-menu></app-menu>
   <app-promo></app-promo>

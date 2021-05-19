@@ -4,12 +4,14 @@
       <div @click="closeMenu" class="menu__close"><img src="@/assets/icn/Close.svg" alt="close"></div>
       <nav>
         <ul class="menu__list">
-          <li @click="closeMenu" class="menu__link"><a href="#about">About me</a></li>
-          <li @click="closeMenu" class="menu__link"><a href="#spheres">Experience</a></li>
-          <li @click="closeMenu" class="menu__link"><a href="#skills">Skills</a></li>
-          <li @click="closeMenu" class="menu__link"><a href="#portfolio">Portfolio</a></li>
-          <li @click="closeMenu" class="menu__link"><a href="#prices">Services</a></li>
-          <li @click="closeMenu" class="menu__link"><a href="#contacts">Contacts</a></li>
+          <li @click="closeMenu"
+              v-for="(menuItem, i) in menuList" :key="i"
+              class="menu__link"
+          >
+            <a :href="menuItem.href">
+              {{ menuItem.section }}
+          </a>
+          </li>
         </ul>
       </nav>
 
@@ -50,6 +52,19 @@
 
 <script>
 export default {
+  data() {
+    return {
+      menuList: [
+        { section: 'About me', href: '#about' },
+        { section: 'Experience', href: '#spheres' },
+        { section: 'Skills', href: '#skills' },
+        { section: 'Portfolio', href: '#portfolio' },
+        { section: 'Services', href: '#prices' },
+        { section: 'Contacts', href: '#contacts' },
+      ]
+    }
+  },
+
   methods: {
     closeMenu() {
       const menu = document.querySelector('.menu');

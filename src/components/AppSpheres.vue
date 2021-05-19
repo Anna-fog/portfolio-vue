@@ -73,49 +73,9 @@
                   </div>
                 </div>
                 <ul class="spheres__item-body">
-                  <li>
-                    <a target="_blank" class="spheres__link" href="https://beclever.by/">
-                      - Kids smart club landing page
-                    </a>
-                  </li>
-                  <li>
-                    <a target="_blank" class="spheres__link" href="http://la-salute.3dw.by/">
-                      - European cuisine restaurant website
-                    </a>
-                  </li>
-                  <li>
-                    <a target="_blank" class="spheres__link" href="http://molisana.3dw.by/">
-                      - Promo site for pasta manufacturer
-                    </a>
-                  </li>
-                  <li>
-                    <a target="_blank" class="spheres__link" href="http://perfectfloor.3dw.by/">
-                      - Floor screed landing page
-                    </a>
-                  </li>
-                  <li>
-                    <a target="_blank" class="spheres__link" href="http://pig-game.3dw.by/">
-                      - Pig game (simple JS game)
-                    </a>
-                  </li>
-                  <li>
-                    <a target="_blank" class="spheres__link" href="http://guess-number.3dw.by/">
-                      - Guess my number game (simple JS game)
-                    </a>
-                  </li>
-                  <li>
-                    <a target="_blank" class="spheres__link" href="http://mailbox.3dw.by/">
-                      - Mailbox (Vue.js app)
-                    </a>
-                  </li>
-                  <li>
-                    <a target="_blank" class="spheres__link" href="http://notes-app.3dw.by/">
-                      - Notes app (note making app on Vue.js)
-                    </a>
-                  </li>
-                  <li>
-                    <a target="_blank" class="spheres__link" href="https://www.breegy.com/">
-                      - Charity website and landing page (made on Vue.js)
+                  <li v-for="(work, i) in works" :key="i">
+                    <a target="_blank" class="spheres__link" :href="work.link">
+                      - {{ work.title }}
                     </a>
                   </li>
                 </ul>
@@ -134,26 +94,8 @@
                   </div>
                 </div>
                 <ul class="spheres__item-body">
-                  <li>
-                    <a target="_blank" class="spheres__link" href="https://www.behance.net/gallery/97648161/Infrared-sauna-website-Design-and-development">- Infrared sauna main page</a>
-                  </li>
-                  <li>
-                    <a target="_blank" class="spheres__link" href="https://www.behance.net/gallery/107369135/Restaurant-website">- European cuisine restaurant website</a>
-                  </li>
-                  <li>
-                    <a target="_blank" class="spheres__link" href="https://www.behance.net/gallery/102718681/Kids-smart-club-landing-page-Web-design-development">- Kids smart club landing page</a>
-                  </li>
-                  <li>
-                    <a target="_blank" class="spheres__link" href="https://www.behance.net/gallery/100726849/Website-Remote-control-toys-shop">- Remote control toys shop</a>
-                  </li>
-                  <li>
-                    <a target="_blank" class="spheres__link" href="https://www.behance.net/gallery/104931981/Promo-site-UIUX-development-of-the-main-page">- Promo site for pasta manufacturer</a>
-                  </li>
-                  <li>
-                    <a target="_blank" class="spheres__link" href="https://www.behance.net/gallery/102530429/Customs-clearence-Web-design-development">- Customs clearance landing page</a>
-                  </li>
-                  <li>
-                    <a target="_blank" class="spheres__link" href="http://molisana.3dw.by/">- Promo site for pasta manufacturer</a>
+                  <li v-for="(work, i) in worksDesign" :key="i">
+                    <a target="_blank" class="spheres__link" :href="work.link">- {{ work.title }}</a>
                   </li>
                 </ul>
               </div>
@@ -168,6 +110,31 @@
 
 <script>
 export default {
+  data() {
+    return {
+      works: [
+        { title: 'Kids smart club landing page', link: 'https://beclever.by/' },
+        { title: 'European cuisine restaurant website', link: 'http://la-salute.3dw.by/' },
+        { title: 'Promo site for pasta manufacturer', link: 'http://molisana.3dw.by/' },
+        { title: 'Floor screed landing page', link: 'http://perfectfloor.3dw.by/' },
+        { title: 'Pig game (simple JS game)', link: 'http://pig-game.3dw.by/' },
+        { title: 'Guess my number game (simple JS game)', link: 'http://guess-number.3dw.by/' },
+        { title: 'Mailbox (Vue.js app)', link: 'http://guess-number.3dw.by/' },
+        { title: 'Notes app (note making app on Vue.js)', link: 'http://notes-app.3dw.by/' },
+        { title: 'Charity website and landing page (made on Vue.js)', link: 'https://www.breegy.com/' },
+      ],
+
+      worksDesign: [
+        { title: 'Infrared sauna main page', link: 'https://www.behance.net/gallery/97648161/Infrared-sauna-website-Design-and-development' },
+        { title: 'European cuisine restaurant website', link: 'http://la-salute.3dw.by/' },
+        { title: 'Kids smart club landing page', link: 'https://beclever.by/' },
+        { title: 'Remote control toys shop', link: 'https://www.behance.net/gallery/100726849/Website-Remote-control-toys-shop' },
+        { title: 'Promo site for pasta manufacturer', link: 'http://molisana.3dw.by/' },
+        { title: 'Customs clearance landing page', link: 'https://www.behance.net/gallery/102530429/Customs-clearence-Web-design-development' },
+      ]
+    }
+  },
+
   mounted() {
     if (window.screen.width > 990) {
       let circleSmall = document.querySelector('.circle-small');

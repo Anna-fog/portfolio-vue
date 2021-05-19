@@ -6,45 +6,14 @@
         <div class="divider"></div>
 
         <div class="portfolio__wrapper">
-
-          <a target="_blank" href="http://perfectfloor.3dw.by/" class="portfolio__item animate__animated animate__fadeInUp wow" data-wow-duration="1s" data-wow-delay="0.4s">
-            <img src="@/assets/img/works/work1.jpg" alt="Perfect floor">
-          </a>
-
-          <a target="_blank" href="https://beclever.by/" class="portfolio__item animate__animated animate__fadeInUp wow" data-wow-duration="1s" data-wow-delay="0.5s">
-            <img src="@/assets/img/works/work2.jpg" alt="Be Clever">
-          </a>
-
-          <a target="_blank" href="http://cdc-logistics.3dw.by/" class="portfolio__item animate__animated animate__fadeInUp wow" data-wow-duration="1s" data-wow-delay="0.6s">
-            <img src="@/assets/img/works/work3.jpg" alt="CDC-Logistics">
-          </a>
-
-          <a target="_blank" href="http://la-salute.3dw.by/" class="portfolio__item vertical animate__animated animate__fadeInRight wow" data-wow-duration="1s" data-wow-delay="0.7s">
-            <img src="@/assets/img/works/work4.jpg" alt="La Salute">
-          </a>
-
-          <a target="_blank" href="http://woodoo.3dw.by/" class="portfolio__item animate__animated animate__fadeInUp wow" data-wow-duration="1s" data-wow-delay="0.4s">
-            <img src="@/assets/img/works/work5.jpg" alt="Woodoo">
-          </a>
-
-          <a target="_blank" href="http://futurenews.3dw.by/" class="portfolio__item horizontal animate__animated animate__fadeInUp wow" data-wow-duration="1s" data-wow-delay="0.4s">
-            <img src="@/assets/img/works/work6.jpg" alt="Future-news">
-          </a>
-
-          <a target="_blank" href="http://pig-game.3dw.by/" class="portfolio__item animate__animated animate__fadeInLeft wow" data-wow-duration="1s" data-wow-delay="0.4s">
-            <img src="@/assets/img/works/work7.jpg" alt="Pig game">
-          </a>
-
-          <a target="_blank" href="http://molisana.3dw.by/" class="portfolio__item animate__animated animate__fadeInLeft wow" data-wow-duration="1s" data-wow-delay="0.5s">
-            <img src="@/assets/img/works/work8.jpg" alt="Molisana">
-          </a>
-
-          <a target="_blank" href="https://www.behance.net/gallery/100726849/Website-Remote-control-toys-shop" class="portfolio__item animate__animated animate__fadeInLeft wow" data-wow-duration="1s" data-wow-delay="0.6s">
-            <img src="@/assets/img/works/work9.jpg" alt="Remote controls toys">
-          </a>
-
-          <a target="_blank" href="https://www.breegy.com/" class="portfolio__item animate__animated animate__fadeInLeft wow" data-wow-duration="1s" data-wow-delay="0.7s">
-            <img src="@/assets/img/works/work10.jpg" alt="Charity website">
+          <a v-for="(work, i) in works" :key="i"
+             target="_blank"
+             :href="work.link"
+             :class="['portfolio__item', 'animate__animated', 'wow', work.class]"
+             data-wow-duration="1s"
+             :data-wow-delay="work.delay"
+          >
+            <img :src="work.image" :alt="work.src">
           </a>
 
 
@@ -57,7 +26,24 @@
 </template>
 
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      works: [
+        { link: 'http://perfectfloor.3dw.by/', image: require('@/assets/img/works/work1.jpg'), alt: 'perfect floor', class: 'animate__fadeInUp', delay: '0.4s' },
+        { link: 'https://beclever.by/', image: require('@/assets/img/works/work2.jpg'), alt: 'be clever', class: 'animate__fadeInUp', delay: '0.5s' },
+        { link: 'http://cdc-logistics.3dw.by/', image: require('@/assets/img/works/work3.jpg'), alt: 'cdc-logistics', class: 'animate__fadeInUp', delay: '0.6s' },
+        { link: 'http://la-salute.3dw.by/', image: require('@/assets/img/works/work4.jpg'), alt: 'la salute', class: 'animate__fadeInRight vertical', delay: '0.4s' },
+        { link: 'http://woodoo.3dw.by/', image: require('@/assets/img/works/work5.jpg'), alt: 'woodoo', class: 'animate__fadeInUp', delay: '0.4s' },
+        { link: 'http://futurenews.3dw.by/', image: require('@/assets/img/works/work6.jpg'), alt: 'future news', class: 'animate__fadeInUp horizontal', delay: '0.4s' },
+        { link: 'http://pig-game.3dw.by/', image: require('@/assets/img/works/work7.jpg'), alt: 'future news', class: 'animate__fadeInLeft', delay: '0.4s' },
+        { link: 'http://molisana.3dw.by/', image: require('@/assets/img/works/work8.jpg'), alt: 'molisana', class: 'animate__fadeInLeft', delay: '0.5s' },
+        { link: 'https://www.behance.net/gallery/100726849/Website-Remote-control-toys-shop', image: require('@/assets/img/works/work9.jpg'), alt: 'remote controls', class: 'animate__fadeInLeft', delay: '0.6s' },
+        { link: 'https://www.breegy.com/', image: require('@/assets/img/works/work10.jpg'), alt: 'charity website', class: 'animate__fadeInLeft', delay: '0.7s' },
+      ]
+    }
+  }
+}
 </script>
 
 <style lang="scss">
