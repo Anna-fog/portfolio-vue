@@ -11,9 +11,8 @@
     "core-js": "^3.6.5",
     "sass-resources-loader": "^2.2.1",
     "vue": "^3.0.0",
-    "vue-loader": "^15.9.7",
+    "vue-loader": "^16.0.0-rc.1",
     "vue-router": "^4.0.0-0",
-    "vue-svg-loader": "^0.16.0",
     "vuex": "^4.0.0-0"
   },
   "devDependencies": {
@@ -29,6 +28,7 @@
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
     "style-resources-loader": "^1.4.1",
+    "vue-svg-loader": "^0.17.0-beta.2",
     "wowjs": "^1.1.3"
   }
 }

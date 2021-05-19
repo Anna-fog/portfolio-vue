@@ -4,16 +4,15 @@ module.exports = {
     chainWebpack: config => {
         const types = ['vue-modules', 'vue', 'normal-modules', 'normal']
         types.forEach(type => addStyleResource(config.module.rule('scss').oneOf(type)))
-        // config.module.rule("svg")
-        //     .oneOf("inline")
-        //     .resourceQuery(/inline/)
-        //     .use("svg-url-loader")
-        //     .loader("svg-url-loader")
+
+        // const svgRule = config.module.rule('svg');
+        // svgRule.uses.clear()
+        // svgRule
+        //     .use('vue-loader')
+        //     .loader('vue-loader') // or `vue-loader-v16` if you are using a preview support of Vue 3 in Vue CLI
         //     .end()
-        //     .end()
-        //     .oneOf("external")
-        //     .use("vue-svg-loader")
-        //     .loader("vue-svg-loader");
+        //     .use('vue-svg-loader')
+        //     .loader('vue-svg-loader');
     },
 }
 
