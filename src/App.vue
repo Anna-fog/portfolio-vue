@@ -9,6 +9,10 @@
   <app-spheres></app-spheres>
   <app-skills></app-skills>
   <app-portfolio></app-portfolio>
+  <app-services></app-services>
+  <app-contacts></app-contacts>
+  <page-up></page-up>
+
 </template>
 
 <script>
@@ -19,6 +23,9 @@ import AppAbout from './components/AppAbout';
 import AppSpheres from './components/AppSpheres';
 import AppSkills from './components/AppSkills';
 import AppPortfolio from "./components/AppPortfolio";
+import AppServices from "./components/AppServices";
+import AppContacts from "./components/AppContacts";
+import PageUp from "./components/PageUp";
 
 export default {
   components: {
@@ -28,12 +35,17 @@ export default {
     AppAbout,
     AppSpheres,
     AppSkills,
-    AppPortfolio
+    AppPortfolio,
+    AppServices,
+    AppContacts,
+    PageUp
   }
 }
 </script>
 
 <style lang="scss">
-@import "@/assets/styles/styles";
+@import "assets/styles/base/variables";
+@import "assets/styles/base/mixins";
+@import "assets/styles/base/animations";
 
 </style>

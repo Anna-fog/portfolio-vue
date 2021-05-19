@@ -61,6 +61,7 @@ export default {}
 </script>
 
 <style lang="scss">
+
 .portfolio {
   background-image: url("../assets/img/portfolio-bg-min.jpg");
   background-size: 50%;

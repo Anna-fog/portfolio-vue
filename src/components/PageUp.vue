@@ -1,0 +1,31 @@
+<template>
+  <a href="#promo" class="pageup">
+    <img src="@/assets/icn/up.svg" alt="Up">
+  </a>
+</template>
+
+<script>
+export default {}
+</script>
+
+<style lang="scss">
+.pageup {
+  display: none;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  height: 15px;
+  width: 40px;
+  transition: .5s all;
+  &:hover {
+    img {
+      filter: brightness(0.5);
+      transform: translateY(-7px);
+    }
+  }
+  img {
+    width: 100%;
+    transition: .7s all;
+  }
+}
+</style>

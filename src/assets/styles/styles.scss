@@ -1,13 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
-@import 'assets/styles/libs/bootstrap-reboot.min';
-@import 'assets/styles/libs/animate';
+@import 'libs/bootstrap-reboot.min';
+@import 'libs/animate';
 
-@import "assets/styles/title.scss";
-@import "assets/styles/btn.scss";
+@import "base/variables";
+@import "base/mixins";
+@import "base/animations";
 
-@import "assets/styles/base/variables";
-@import "assets/styles/base/mixins";
-@import "assets/styles/base/animations";
+@import "title.scss";
+@import "btn.scss";
 
 * {
   font-family: 'Play', sans-serif;
@@ -35,3 +34,55 @@ a:hover {
   background-color: $light;
   margin: 25px auto 0 auto;
 }
+
+$middle: #9AB3C2;
+$light: #DDE7ED;
+$dark: #547489;
+$bg: #F9FBFC;
+
+
+@mixin sign {
+  &:before {
+    content: '<';
+    margin: 0 10px;
+  }
+  &:after {
+    content: '>';
+    margin: 0 10px;
+  }
+}
+
+@mixin before-circle {
+  &:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: $light;
+
+  }
+}
+
+@keyframes icon-hover {
+  50% {
+    transform: scale(.96);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes rotate {
+
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+

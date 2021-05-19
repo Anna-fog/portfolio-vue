@@ -53,6 +53,7 @@ export default {}
 </script>
 
 <style lang="scss">
+
 .burger {
   display: flex;
   align-items: flex-end;
