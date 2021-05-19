@@ -63,4 +63,41 @@ export default {
 @import "assets/styles/base/variables";
 @import "assets/styles/base/mixins";
 @import "assets/styles/base/animations";
+
+.circles {
+  &:before {
+    content: url('assets/img/dots.svg');
+    display: block;
+    opacity: 0.14;
+    position: absolute;
+    transform: rotate(90deg);
+    z-index: -1;
+    left: -2.5%;
+  }
+}
+
+.circles-2 {
+  &:after {
+    content: url('assets/img/dots.svg');
+    position: absolute;
+    top: 11px;
+    left: 200px;
+    z-index: 0;
+  }
+  &_skills {
+    position: relative;
+    &:after {
+      top: 9px;
+      left: 330px;
+      transform: rotate(90deg);
+    }
+  }
+  &_prices {
+    position: relative;
+    &:after {
+      right: 445px;
+      left: auto;
+    }
+  }
+}
 </style>

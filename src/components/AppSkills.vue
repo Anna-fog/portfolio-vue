@@ -23,7 +23,7 @@
         <div class="skills__item2">
           <div class="skills__item-percentages">
             <div class="subtitle">Websites</div>
-            <div class="skills__number">75%</div>
+            <div class="skills__number">45%</div>
           </div>
           <div class="skills__line">
             <div class="skills__line skills__line_pecr"></div>
@@ -33,7 +33,7 @@
         <div class="skills__item2">
           <div class="skills__item-percentages">
             <div class="subtitle">Landing pages</div>
-            <div class="skills__number">95%</div>
+            <div class="skills__number">35%</div>
           </div>
           <div class="skills__line">
             <div class="skills__line skills__line_pecr"></div>
@@ -43,7 +43,7 @@
         <div class="skills__item2">
           <div class="skills__item-percentages">
             <div class="subtitle">Applications</div>
-            <div class="skills__number">60%</div>
+            <div class="skills__number">20%</div>
           </div>
           <div class="skills__line">
             <div class="skills__line skills__line_pecr"></div>

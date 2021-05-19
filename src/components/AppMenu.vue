@@ -1,7 +1,7 @@
 <template>
   <div class="menu">
     <div class="menu__block">
-      <div @click="closeMenu" class="menu__close"><img src="@/assets/icn/Close.svg" alt="close"></div>
+      <div @click="closeMenu" class="menu__close"><img src="@/assets/icn/close.svg" alt="close"></div>
       <nav>
         <ul class="menu__list">
           <li @click="closeMenu"
