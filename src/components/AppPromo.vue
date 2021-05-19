@@ -1,7 +1,7 @@
 <template>
   <section id="promo" class="promo">
     <a href="#contacts" class="black-link"></a>
-    <div class="burger">
+    <div @click="openMenu" class="burger">
       <span></span>
       <span class="middle"></span>
       <span></span>
@@ -20,7 +20,15 @@
 </template>
 
 <script>
-export default {}
+export default {
+  methods: {
+    openMenu() {
+      const menu = document.querySelector('.menu');
+
+      menu.classList.add('active')
+    }
+  }
+}
 </script>
 
 <style lang="scss">

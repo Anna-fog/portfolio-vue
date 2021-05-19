@@ -1,15 +1,15 @@
 <template>
   <div class="menu">
     <div class="menu__block">
-      <div class="menu__close"><img src="@/assets/icn/Close.svg" alt="close"></div>
+      <div @click="closeMenu" class="menu__close"><img src="@/assets/icn/Close.svg" alt="close"></div>
       <nav>
         <ul class="menu__list">
-          <li class="menu__link"><a href="#about">About me</a></li>
-          <li class="menu__link"><a href="#spheres">Experience</a></li>
-          <li class="menu__link"><a href="#skills">Skills</a></li>
-          <li class="menu__link"><a href="#portfolio">Portfolio</a></li>
-          <li class="menu__link"><a href="#prices">Services</a></li>
-          <li class="menu__link"><a href="#contacts">Contacts</a></li>
+          <li @click="closeMenu" class="menu__link"><a href="#about">About me</a></li>
+          <li @click="closeMenu" class="menu__link"><a href="#spheres">Experience</a></li>
+          <li @click="closeMenu" class="menu__link"><a href="#skills">Skills</a></li>
+          <li @click="closeMenu" class="menu__link"><a href="#portfolio">Portfolio</a></li>
+          <li @click="closeMenu" class="menu__link"><a href="#prices">Services</a></li>
+          <li @click="closeMenu" class="menu__link"><a href="#contacts">Contacts</a></li>
         </ul>
       </nav>
 
@@ -44,23 +44,30 @@
 
       </div>
     </div>
-    <div class="menu__overlay"></div>
+    <div @click="closeMenu" class="menu__overlay"></div>
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  methods: {
+    closeMenu() {
+      const menu = document.querySelector('.menu');
+      menu.classList.remove('active');
+    }
+  }
+}
 </script>
 
 <style lang="scss">
 
 .burger {
+  position: fixed;
   display: flex;
   align-items: flex-end;
   flex-direction: column;
   height: 21px;
   justify-content: space-between;
-  position: absolute;
   top: 20px;
   right: 30px;
   cursor: pointer;
@@ -72,7 +79,7 @@ span {
   display: block;
   width: 30px;
   height: 1.5px;
-  background: white;
+  background: #DDE7ED;
 }
 
 span.middle {

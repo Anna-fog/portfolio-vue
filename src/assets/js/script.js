@@ -2,48 +2,6 @@
 
 window.addEventListener('DOMContentLoaded', () => {
 
-    // side menu
-
-    const burger = document.querySelector('.burger'),
-          menu = document.querySelector('.menu'),
-          closeElem = document.querySelector('.menu__close'),
-          overlay = document.querySelector('.menu__overlay');
-
-
-    burger.addEventListener('click', () => {
-        menu.classList.add('active');
-    });
-
-
-    // close menu
-
-    function menuClose() {
-        menu.classList.remove('active');
-    }
-
-    closeElem.addEventListener('click', () => {
-        menuClose();
-    });
-
-    overlay.addEventListener('click', () => {
-        menuClose();
-    });
-
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') {
-            menuClose();
-        }
-    });
-
-    const links = document.querySelectorAll('.menu__link a');
-
-    links.forEach(item => {
-        item.addEventListener('click', () => {
-            menuClose();
-        });
-    });
-
-
     // percentages
 
     const percentages = document.querySelectorAll('.skills__number'),
