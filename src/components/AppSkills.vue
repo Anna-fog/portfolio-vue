@@ -93,7 +93,16 @@
 </template>
 
 <script>
-export default {}
+export default {
+  mounted() {
+    const percentages = document.querySelectorAll('.skills__number');
+    const lines = document.querySelectorAll('.skills__line_pecr');
+
+    percentages.forEach((item, i) => {
+      lines[i].style.width = item.innerHTML;
+    });
+  }
+}
 </script>
 
 <style lang="scss">

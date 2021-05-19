@@ -27,6 +27,8 @@ import AppServices from "./components/AppServices";
 import AppContacts from "./components/AppContacts";
 import PageUp from "./components/PageUp";
 
+import { WOW } from 'wowjs'
+
 export default {
   components: {
     SidePanel,
@@ -39,6 +41,19 @@ export default {
     AppServices,
     AppContacts,
     PageUp
+  },
+
+  mounted() {
+    new WOW().init();
+
+    window.addEventListener('scroll', () => {
+      const pageUp = document.querySelector('.pageup');
+      if (window.scrollY > 1600) {
+        pageUp.classList.add('fadeIn');
+      } else {
+        pageUp.classList.remove('fadeIn');
+      }
+    });
   }
 }
 </script>
@@ -47,5 +62,4 @@ export default {
 @import "assets/styles/base/variables";
 @import "assets/styles/base/mixins";
 @import "assets/styles/base/animations";
-
 </style>

@@ -167,7 +167,25 @@
 </template>
 
 <script>
-export default {}
+export default {
+  mounted() {
+    if (window.screen.width > 990) {
+      let circleSmall = document.querySelector('.circle-small');
+      let circleMiddle = document.querySelector('.circle-middle');
+      let circleLarge = document.querySelector('.circle-large');
+      let circleImg = document.querySelector('.circle-img');
+
+      window.addEventListener('mousemove', function(e) {
+        let x = e.clientX / window.innerWidth;
+        let y = e.clientY / window.innerHeight;
+        circleMiddle.style.transform = 'translate(-' + x * 30 + 'px, ' + y * 70 + 'px)';
+        circleLarge.style.transform = 'translate(' + x * 90 + 'px, ' + y * 50 + 'px)';
+        circleImg.style.transform = 'translate(' + x * 100 + 'px, -' + y * 70 + 'px)';
+        circleSmall.style.transform = 'matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0,' + (-x * 25) + ',' + (-y * 50) + ', 0, 1)';
+      });
+    }
+  }
+}
 </script>
 
 <style lang="scss">

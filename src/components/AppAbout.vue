@@ -2,7 +2,7 @@
   <section id="about" class="about">
     <div class="container">
       <div class="about__wrapper">
-        <div class="about__photo">
+        <div @click="addPhotoFilter" class="about__photo">
           <img src="@/assets/img/main_photo.png" alt="photo">
 
         </div>
@@ -47,7 +47,17 @@
 </template>
 
 <script>
-export default {}
+export default {
+  methods: {
+    addPhotoFilter() {
+      const promoBg = document.querySelector('.promo');
+      const photo = document.querySelector('.about__photo > img');
+
+      photo.classList.toggle('invert-filter');
+      promoBg.classList.toggle('promo-filter');
+    }
+  }
+}
 </script>
 
 <style lang="scss">

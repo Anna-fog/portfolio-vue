@@ -1,41 +1,6 @@
 'use strict'
 
 window.addEventListener('DOMContentLoaded', () => {
-
-    // percentages
-
-    const percentages = document.querySelectorAll('.skills__number'),
-            lines = document.querySelectorAll('.skills__line_pecr');
-
-    percentages.forEach((item, i) => {
-        lines[i].style.width = item.innerHTML;
-    });
-
-
-    // pageup & smooth scroll
-
-    // $(window).scroll(function() {
-    //     if ($(this).scrollTop() > 1600) {
-    //         $('.pageup').fadeIn();
-    //     } else {
-    //         $('.pageup').fadeOut();
-    //     }
-    // });
-    //
-    // $('a[href^="#"]').on('click', function() {
-    //     let href = $(this).attr('href');
-    //     $('html, body').animate({
-    //         scrollTop: $(href).offset().top
-    //     }, 400);
-    //     return false;
-    // });
-
-
-    // wow animation
-
-    new WOW().init();
-
-
     // sending form
 
     // const ufo = document.querySelector('#sent');
@@ -61,39 +26,6 @@ window.addEventListener('DOMContentLoaded', () => {
     //     });
     //     return false;
     // });
-
-
-    // mousemove circles
-
-    const mouseMove = function() {
-        if(window.screen.width > 990) {
-            let circleSmall = document.querySelector('.circle-small');
-            let circleMiddle = document.querySelector('.circle-middle');
-            let circleLarge = document.querySelector('.circle-large');
-            let circleImg = document.querySelector('.circle-img');
-
-            window.addEventListener('mousemove', function(e) {
-                let x = e.clientX / window.innerWidth;
-                let y = e.clientY / window.innerHeight;
-                circleMiddle.style.transform = 'translate(-' + x * 30 + 'px, ' + y * 70 + 'px)';
-                circleLarge.style.transform = 'translate(' + x * 90 + 'px, ' + y * 50 + 'px)';
-                circleImg.style.transform = 'translate(' + x * 100 + 'px, -' + y * 70 + 'px)';
-                circleSmall.style.transform = 'matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0,' + (-x * 25) + ',' + (-y * 50) + ', 0, 1)';
-            });
-        }
-    };
-    mouseMove();
-
-
-    // add filter to photo by click
-
-    const photo = document.querySelector('.about__photo > img');
-    const promoBg = document.querySelector('.promo');
-
-    photo.addEventListener('click', () => {
-        photo.classList.toggle('invert-filter');
-        promoBg.classList.toggle('promo-filter');
-    });
 
 });
 

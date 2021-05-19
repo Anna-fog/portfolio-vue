@@ -1,5 +1,4 @@
 @import 'libs/bootstrap-reboot.min';
-@import 'libs/animate';
 
 @import "base/variables";
 @import "base/mixins";
@@ -7,6 +6,12 @@
 
 @import "title.scss";
 @import "btn.scss";
+
+@import "base/media";
+
+html {
+  scroll-behavior: smooth;
+}
 
 * {
   font-family: 'Play', sans-serif;
@@ -36,54 +41,8 @@ a:hover {
   margin: 25px auto 0 auto;
 }
 
-$middle: #9AB3C2;
-$light: #DDE7ED;
-$dark: #547489;
-$bg: #F9FBFC;
-
-
-@mixin sign {
-  &:before {
-    content: '<';
-    margin: 0 10px;
-  }
-  &:after {
-    content: '>';
-    margin: 0 10px;
-  }
-}
-
-@mixin before-circle {
-  &:before {
-    content: '';
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    background: $light;
-
-  }
-}
-
-@keyframes icon-hover {
-  50% {
-    transform: scale(.96);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-@keyframes rotate {
-
-  from {
-    transform: rotate(0);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.fadeIn {
+  opacity: 1;
+  cursor: pointer;
 }
 

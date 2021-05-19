@@ -10,7 +10,8 @@ export default {}
 
 <style lang="scss">
 .pageup {
-  display: none;
+  opacity: 0;
+  cursor: default;
   position: fixed;
   bottom: 40px;
   right: 40px;
