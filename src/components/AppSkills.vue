@@ -128,12 +128,40 @@ export default {
   padding-bottom: 100px;
   background-color: $bg;
 
+  @media (max-width: 768px) {
+    padding-top: 60px;
+  }
+
+  @media (max-width: 576px) {
+    padding-bottom: 80px;
+  }
+
   &__wrapper {
     display: grid;
     grid-template-columns: repeat(4, minmax(275px, auto));
     grid-template-rows: repeat(2, minmax(275px, auto));
     gap: 13px;
     padding-top: 50px;
+
+    @media (max-width: 1200px) {
+      grid-template-columns: repeat(auto-fit,minmax(275px,300px));
+      grid-template-rows: repeat(auto-fit,minmax(275px,300px));
+      justify-content: center;
+    }
+
+    @media (max-width: 990px) {
+      grid-template-columns: repeat(auto-fit, 300px);
+    }
+
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(auto-fit, 243px);
+    }
+
+    @media (max-width: 576px) {
+      padding-top: 40px;
+      grid-template-columns: minmax(auto, 400px);
+      grid-template-rows: repeat(auto-fit, minmax(270px, auto));
+    }
   }
 
   &__item {
@@ -142,10 +170,27 @@ export default {
     padding: 25px;
     background-color: #f9fbfc;
     transition: 0.4s all;
+
     &:hover {
       box-shadow: 0 0 9px rgba(46, 97, 113, 0.13);
       border-color: #f9fbfc;
       background-color: white;
+
+      @media (max-width: 576px) {
+        box-shadow: none;
+        border-color: $middle;
+      }
+    }
+  }
+
+  &__item2 {
+    &:last-child {
+      @media (max-width: 1200px) {
+        grid-column: 1 / 3;
+      }
+      @media (max-width: 768px) {
+        grid-column: auto;
+      }
     }
   }
 
@@ -156,12 +201,20 @@ export default {
   &__header {
     margin-top: 20px;
     font-weight: bold;
+
+    @media (max-width: 576px) {
+      margin-top: 15px;
+    }
   }
 
   &__descr {
     font-size: 14px;
     line-height: 18px;
     margin-top: 15px;
+
+    @media (max-width: 576px) {
+      margin-top: 10px;
+    }
   }
 
   &__wrapper-percentages {
@@ -170,6 +223,31 @@ export default {
     grid-template-columns: repeat(3, 350px);
     grid-template-rows: 65px;
     gap: 45px;
+
+    @media (max-width: 1200px) {
+      padding-top: 90px;
+      grid-template-columns: repeat(2,350px);
+      grid-template-rows: repeat(2,65px);
+      column-gap: 80px;
+      row-gap: 45px;
+      justify-content: center;
+    }
+
+    @media (max-width: 990px) {
+      column-gap: 75px;
+      grid-template-columns: repeat(2,300px);
+    }
+
+    @media (max-width: 768px) {
+      padding-top: 45px;
+      grid-template-columns: minmax(auto, 600px);
+      row-gap: 35px;
+    }
+
+    @media (max-width: 576px) {
+      grid-template-columns: minmax(300px, 400px);
+      row-gap: 25px;
+    }
   }
 
   &__item-percentages {
@@ -187,6 +265,12 @@ export default {
     background-color: $light;
     border-radius: 4px;
     margin-top: 20px;
+
+    @media (max-width: 576px) {
+      margin-top: 15px;
+      height: 7px;
+    }
+
     &_pecr {
       background-color: $middle;
     }
@@ -196,6 +280,7 @@ export default {
     position: relative;
     padding-left: 15px;
     @include before-circle;
+
     &:before {
       top: -4px;
     }

@@ -7,7 +7,7 @@
 @import "title.scss";
 @import "btn.scss";
 
-@import "base/media";
+//@import "base/media";
 
 html {
   scroll-behavior: smooth;
@@ -32,6 +32,23 @@ a:hover {
 .container {
   width: 1140px;
   margin: 0 auto;
+
+  @media (max-width: 1200px) {
+    max-width: 960px;
+  }
+
+  @media (max-width: 990px) {
+    max-width: 720px;
+  }
+
+  @media (max-width: 768px) {
+    max-width: 500px;
+  }
+
+  @media (max-width: 576px) {
+    max-width: 100%;
+    padding: 0 20px;
+  }
 }
 
 .divider {
@@ -39,6 +56,10 @@ a:hover {
   height: 6px;
   background-color: $light;
   margin: 25px auto 0 auto;
+
+  @media (max-width: 576px) {
+    margin: 15px auto 0 auto;
+  }
 }
 
 .fadeIn {

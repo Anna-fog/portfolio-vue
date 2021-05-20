@@ -53,6 +53,18 @@ export default {
   background-size: 50%;
   background-attachment: fixed;
 
+  @media (max-width: 1440px) {
+    background-size: 35%;
+  }
+
+  @media (max-width: 1200px) {
+    background-size: 50%;
+  }
+
+  @media (max-width: 990px) {
+    background-size: 100%;
+  }
+
   &__moon {
     background-image: url("../assets/img/moon-min.png");
     background-size: 30%;
@@ -70,29 +82,71 @@ export default {
     grid-template: repeat(2, 280px) / repeat(4, 280px);
     grid-auto-rows: 280px;
     gap: 5px;
+
+    @media (max-width: 1200px) {
+      grid-template-columns: repeat(auto-fit, 280px);
+      grid-auto-rows: 280px;
+      justify-content: center;
+      gap: 13px;
+    }
+
+    @media (max-width: 990px) {
+      grid-template-columns: repeat(auto-fit,minmax(auto, 340px));
+    }
+
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(auto-fit,minmax(auto, 940px));
+      grid-auto-rows: 300px;
+      grid-template: unset;
+    }
+
+    @media (max-width: 576px) {
+      margin-top: 40px;
+      grid-template-columns: minmax(auto, 370px);
+      grid-auto-rows: 240px;
+    }
+
     .vertical {
       grid-row: 1 / 3;
       grid-column: 4 / 5;
+
+      @media (max-width: 1200px) {
+        grid-row: unset;
+        grid-column: unset;
+      }
     }
+
     .horizontal {
       grid-row: 2 / 3;
       grid-column: 2 / 4;
+
+      @media (max-width: 1200px) {
+        grid-row: unset;
+        grid-column: unset;
+      }
     }
   }
   &__item {
     transition: 0.5s all;
     border-radius: 4px;
     overflow: hidden;
+
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       transition: 0.7s all ease-out;
     }
+
     &:hover {
       img {
         transform: scale(1.04);
         filter: contrast(75%);
+
+        @media (max-width: 768px) {
+          transform: unset;
+          filter: unset;
+        }
       }
     }
   }

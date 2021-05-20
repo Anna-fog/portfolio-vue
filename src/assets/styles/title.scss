@@ -5,27 +5,78 @@
   position: relative;
   margin-bottom: 0;
   z-index: 1;
+
+  @media (max-width: 990px) {
+    font-size: 30px;
+  }
+
+  @media (max-width: 576px) {
+    font-size: 26px;
+    line-height: 34px;
+  }
+
   &_promo {
     color: white;
     font-size: 48px;
     margin-top: 14px;
+
+    @media (max-width: 990px) {
+      font-size: 46px;
+    }
+
+    @media (max-width: 768px) {
+      line-height: 40px;
+      font-size: 42px;
+    }
+
+    @media (max-width: 576px) {
+      line-height: 34px;
+      font-size: 30px;
+    }
+
+    span {
+      @media (max-width: 768px) {
+        font-size: 24px;
+      }
+
+      @media (max-width: 576px) {
+        font-size: 20px;
+      }
+    }
   }
+
   &-portfolio {
     color: $light;
   }
+
   &_center {
     text-align: center;
   }
+
   span {
     font-size: 28px;
     color: white;
   }
+
   &_contacts {
     color: white;
   }
 }
+
 .sign {
   @include sign;
+
+  &:before {
+    @media (max-width: 576px) {
+      margin: 0 5px;
+    }
+  }
+
+  &:after {
+    @media (max-width: 576px) {
+      margin: 0 5px;
+    }
+  }
 }
 
 .subtitle {
@@ -35,11 +86,17 @@
   font-size: 20px;
   font-weight: bold;
   line-height: 24px;
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
+
   &_promo {
     color: white;
     font-size: 16px;
     letter-spacing: 0.105em;
   }
+
   &_small {
     margin-bottom: 5px;
     font-size: 16px;

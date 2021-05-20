@@ -88,6 +88,10 @@
 .icon {
   &:hover {
     animation: icon-hover 1s;
+
+    @media (max-width: 768px) {
+      animation: none;
+    }
   }
 }
 

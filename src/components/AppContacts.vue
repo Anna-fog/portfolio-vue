@@ -81,6 +81,10 @@ export default {}
   background-attachment: fixed;
   min-height: 100vh;
 
+  @media (max-width: 990px) {
+    background-size: 100%;
+  }
+
   &__moon {
     background-image: url('../assets/img/moon-min.png');
     background-size: 30%;
@@ -89,32 +93,55 @@ export default {}
     background-blend-mode: hard-light;
     background-position: 90% 25%;
     padding: 94px 0 55px 0;
+
+    @media (max-width: 990px) {
+      padding: 94px 35px 40px 35px;
+    }
+
+    @media (max-width: 576px) {
+      padding: 60px 0 40px 0;
+    }
   }
 
   &__wrapper {
     display: flex;
     justify-content: flex-start;
     position: relative;
+
+    @media (max-width: 990px) {
+      justify-content: flex-start;
+    }
   }
 
   &__link {
     max-width: 25px;
     max-height: 25px;
     margin-right: 15px;
+
     path {
       transition: 0.6s all;
       fill: white;
     }
+
     rect {
       transition: 0.6s all;
       fill: white;
     }
+
     &:hover {
       path {
         fill: $middle;
+
+        @media (max-width: 768px) {
+          fill: white;
+        }
       }
       rect {
         fill: $middle;
+
+        @media (max-width: 768px) {
+          fill: white;
+        }
       }
     }
   }
@@ -141,6 +168,16 @@ export default {}
     row-gap: 30px;
     column-gap: 25px;
     position: relative;
+
+    @media (max-width: 768px) {
+      grid-template: 45px 45px 190px 45px/ minmax(280px, 400px);
+    }
+
+    @media (max-width: 576px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: 45px 45px 190px 45px;
+    }
+
     label {
       position: absolute;
       display: block;
@@ -156,12 +193,26 @@ export default {}
       text-align: center;
     }
   }
+
+  &__content {
+    @media (max-width: 576px) {
+      margin: 0 auto;
+      width: 100%;
+    }
+  }
+
   &__triggers {
     grid-column: 1/3;
     display: grid;
     grid-template-columns: repeat(2, auto);
     justify-content: space-between;
     align-items: center;
+
+    @media (max-width: 768px) {
+      grid-template-columns: auto;
+      row-gap: 25px;
+      margin-top: -15px;
+    }
   }
 
   &__policy {
@@ -169,6 +220,11 @@ export default {}
       color: white;
       font-size: 14px;
       line-height: 18px;
+
+      @media (max-width: 576px) {
+        text-align: center;
+      }
+
       a {
         color: #779DB8;
         &:hover {
@@ -176,6 +232,7 @@ export default {}
         }
       }
     }
+
     input {
       margin-right: 5px;
     }
@@ -183,6 +240,11 @@ export default {}
 
   &__input {
     position: relative;
+
+    @media (max-width: 768px) {
+      grid-column: 1/3;
+    }
+
     input {
       width: 100%;
       height: 100%;
@@ -194,9 +256,11 @@ export default {}
       color: white;
     }
   }
+
   &__textarea {
     position: relative;
     grid-column: 1/3;
+
     textarea {
       width: 100%;
       height: 100%;
@@ -208,6 +272,7 @@ export default {}
       color: white;
       resize: none;
     }
+
     label {
       width: 110px;
     }
@@ -218,12 +283,39 @@ export default {}
     margin-top: 75px;
     text-align: left;
     font-size: 14px;
+
+    @media (max-width: 990px) {
+      text-align: left;
+    }
+
+    @media (max-width: 768px) {
+      margin-top: 120px;
+    }
+
+    @media (max-width: 576px) {
+      text-align: center;
+    }
   }
+
   &__ufo {
     display: none;
     position: absolute;
     left: 46%;
     bottom: 40%;
+
+    @media (max-width: 768px) {
+      left: 44%;
+    }
+
+    @media (max-width: 576px) {
+      left: 43%;
+    }
+  }
+
+  .btn_contacts {
+    @media (max-width: 768px) {
+      order: 2;
+    }
   }
 }
 </style>

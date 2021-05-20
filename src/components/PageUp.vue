@@ -18,12 +18,19 @@ export default {}
   height: 15px;
   width: 40px;
   transition: .5s all;
+
   &:hover {
     img {
       filter: brightness(0.5);
       transform: translateY(-7px);
+
+      @media (max-width: 990px) {
+        filter: none;
+        transform: none;
+      }
     }
   }
+
   img {
     width: 100%;
     transition: .7s all;

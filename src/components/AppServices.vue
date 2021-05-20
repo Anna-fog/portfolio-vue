@@ -44,6 +44,10 @@ export default {
   padding-bottom: 120px;
   background-color: $bg;
 
+  @media (max-width: 576px) {
+    padding: 50px 0;
+  }
+
   &__wrapper {
     padding-top: 70px;
     display: grid;
@@ -52,6 +56,29 @@ export default {
     grid-template-rows: repeat(2, minmax(50px, auto));
     grid-auto-rows: minmax(50px, auto);
     row-gap: 20px;
+
+    @media (max-width: 1440px) {
+      justify-content: space-around;
+    }
+
+    @media (max-width: 1200px) {
+      justify-content: space-around;
+      column-gap: 40px;
+    }
+
+    @media (max-width: 990px) {
+      grid-template-columns: repeat(auto-fit, 290px);
+    }
+
+    @media (max-width: 768px) {
+      padding-top: 50px;
+      grid-template-columns: minmax(auto, 600px);
+    }
+
+    @media (max-width: 576px) {
+      padding-top: 40px;
+      grid-template-columns: minmax(auto,400px);
+    }
   }
 
   &__item {
@@ -60,15 +87,32 @@ export default {
     justify-content: space-between;
     grid-template-rows: repeat(2, auto);
     padding-left: 25px;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
   }
+
+  &__price {
+    @media (max-width: 576px) {
+      font-size: 14px;
+    }
+  }
+
   &__descr {
     grid-column: 1/3;
     grid-row: 2/3;
     font-size: 14px;
   }
+
   &__header {
     font-weight: bold;
     position: relative;
+
+    @media (max-width: 576px) {
+      font-size: 14px;
+    }
+
     &:before {
       content: '';
       width: 15px;
