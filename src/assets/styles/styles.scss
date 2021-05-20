@@ -67,3 +67,8 @@ a:hover {
   cursor: pointer;
 }
 
+.fadeOutUp {
+  animation: fadeOutUp 4s;
+  transition: all ease-in-out;
+}
+

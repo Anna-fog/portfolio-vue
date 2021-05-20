@@ -37,27 +37,23 @@
 
             <div class="contacts__descr">You can leave your details for feedback</div>
 
-            <form id="contacts-form" action="#" class="contacts__form">
+            <form @submit.prevent="onSubmit" id="contacts-form" action="#" class="contacts__form">
               <div class="contacts__input">
-                <input required name="name" id="name" type="text">
+                <input v-model="name" required name="name" id="name" type="text">
                 <label for="name">Your name</label>
               </div>
               <div class="contacts__input">
-                <input required name="email" id="email" type="email">
+                <input v-model="email" required name="email" id="email" type="email">
                 <label for="email">Your email</label>
               </div>
               <div class="contacts__textarea">
-                <textarea id="message" name="message"></textarea>
+                <textarea v-model="message" id="message" name="message"></textarea>
                 <label for="message">Your message</label>
               </div>
               <div class="contacts__triggers">
                 <button class="btn btn_contacts">Send a message</button>
-                <!--                        <div class="contacts__policy">-->
-                <!--                            <input required type="checkbox">-->
-                <!--                            <span>I agree with <a target="_blank" href="policy.html">the privacy policy</a></span>-->
-                <!--                        </div>-->
               </div>
-              <div id="sent" class="contacts__ufo"><img src="icn/ufo.svg" alt="UFO"></div>
+              <div id="sent" class="contacts__ufo"><img src="@/assets/icn/ufo.svg" alt="UFO"></div>
             </form>
           </div>
         </div>
@@ -69,7 +65,44 @@
 </template>
 
 <script>
-export default {}
+import axios from 'axios';
+
+export default {
+  data() {
+    return {
+      name: '',
+      email: '',
+      message: ''
+    }
+  },
+
+  methods: {
+    onSubmit() {
+      console.log(`Name: ${this.name}, email: ${this.email}, message: ${this.message}`);
+
+      axios.post('mailer/post.php', {
+        'name': this.name,
+        'email': this.email,
+        'message': this.message
+      }).then(response => {
+        console.log('success', response.data.message)
+
+        // animation
+        const ufo = document.querySelector('#sent');
+        ufo.classList.add('animated', 'fadeInUp');
+        setTimeout(() => {
+          ufo.classList.add('fadeOutUp');
+        }, 1000);
+        setTimeout(() => {
+          ufo.classList.remove('fadeOutUp')
+        }, 3000);
+
+      }).catch(error => {
+        console.log(error.response);
+      });
+    }
+  }
+}
 </script>
 
 <style lang="scss">
@@ -215,29 +248,6 @@ export default {}
     }
   }
 
-  &__policy {
-    span {
-      color: white;
-      font-size: 14px;
-      line-height: 18px;
-
-      @media (max-width: 576px) {
-        text-align: center;
-      }
-
-      a {
-        color: #779DB8;
-        &:hover {
-          text-decoration: none;
-        }
-      }
-    }
-
-    input {
-      margin-right: 5px;
-    }
-  }
-
   &__input {
     position: relative;
 
@@ -298,7 +308,8 @@ export default {}
   }
 
   &__ufo {
-    display: none;
+    //display: none;
+    opacity: 0;
     position: absolute;
     left: 46%;
     bottom: 40%;
