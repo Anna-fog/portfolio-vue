@@ -8,13 +8,17 @@
     </div>
 
     <div class="container">
-      <div class="subtitle subtitle_promo circles">Anna Krivoruchko</div>
-      <h1 class="title title_promo">Front-end developer <br>
-        <span>& UI | UX designer</span>
-      </h1>
-      <button class="btn btn_promo">
-        <a href="#portfolio" class="promo__link">Portfolio</a>
-      </button>
+
+      <div class="promo__wrapper">
+        <div class="subtitle subtitle_promo circles">Anna Krivoruchko</div>
+        <h1 class="title title_promo">Front-end developer <br>
+          <span>& UI | UX designer</span>
+        </h1>
+        <button class="btn btn_promo">
+          <a href="#portfolio" class="promo__link">Portfolio</a>
+        </button>
+      </div>
+
     </div>
   </section>
 </template>
@@ -31,7 +35,6 @@ export default {
 </script>
 
 <style lang="scss">
-
 .promo {
   min-height: 100vh;
   position: relative;
@@ -41,6 +44,20 @@ export default {
   background-color: #547F89;
   background-attachment: fixed;
   transition: 0.5s all;
+
+  &__wrapper {
+    @media (max-width: 1440px) {
+      padding-left: 100px;
+    }
+
+    @media (max-width: 1200px) {
+      padding-left: 60px;
+    }
+
+    @media (max-width: 768px) {
+      padding-left: 0;
+    }
+  }
 
   &__link {
     display: flex;
@@ -70,6 +87,4 @@ export default {
 .promo-filter {
   background-blend-mode: luminosity;
 }
-
-
 </style>

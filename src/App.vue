@@ -73,6 +73,10 @@ export default {
     transform: rotate(90deg);
     z-index: -1;
     left: -2.5%;
+
+    @media (max-width: 1200px) {
+      top: -10px;
+    }
   }
 }
 
@@ -81,22 +85,70 @@ export default {
     content: url('assets/img/dots.svg');
     position: absolute;
     top: 11px;
-    left: 200px;
+    left: 180px;
     z-index: 0;
+
+    @media (max-width: 576px) {
+      left: 140px;
+      top: 4px;
+    }
   }
+
   &_skills {
     position: relative;
+
+    @media (max-width: 576px) {
+      max-width: 370px;
+      margin: 0 auto;
+    }
+
     &:after {
       top: 9px;
       left: 330px;
       transform: rotate(90deg);
+
+      @media (max-width: 1200px) {
+        left: 249px;
+      }
+      @media (max-width: 990px) {
+        left: 160px;
+      }
+      @media (max-width: 768px) {
+        left: 49px;
+      }
+      @media (max-width: 576px) {
+        top: 0;
+        left: 0;
+      }
     }
   }
+
   &_prices {
     position: relative;
+
+    @media (max-width: 576px) {
+      max-width: 200px;
+      margin: 0 auto;
+    }
+
     &:after {
       right: 445px;
       left: auto;
+
+      @media (max-width: 1200px) {
+        right: 354px;
+      }
+      @media (max-width: 990px) {
+        right: 249px;
+        left: auto;
+      }
+      @media (max-width: 768px) {
+        right: 138px;
+      }
+      @media (max-width: 576px) {
+        right: 0;
+        top: 5px;
+      }
     }
   }
 }
