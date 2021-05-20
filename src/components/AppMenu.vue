@@ -87,19 +87,30 @@ export default {
   right: 30px;
   cursor: pointer;
   transition: 0.5s all;
-&:hover {
-   height: 30px;
- }
-span {
-  display: block;
-  width: 30px;
-  height: 1.5px;
-  background: #DDE7ED;
-}
 
-span.middle {
-  width: 36px;
-}
+  @media (max-width: 576px) {
+    right: 15px;
+    top: 15px;
+  }
+
+  &:hover {
+     height: 30px;
+
+    @media (max-width: 990px) {
+      height: 21px;
+    }
+   }
+
+  span {
+    display: block;
+    width: 30px;
+    height: 1.5px;
+    background: #DDE7ED;
+  }
+
+  span.middle {
+    width: 36px;
+  }
 }
 
 .menu {
@@ -112,12 +123,14 @@ span.middle {
   visibility: hidden;
   opacity: 0;
   transition: 0.6s all;
-&.active {
+
+  &.active {
    visibility: visible;
    opacity: 1;
    left: 0;
  }
-&__block {
+
+  &__block {
    position: relative;
    width: 400px;
    background-color: $light;
@@ -126,115 +139,148 @@ span.middle {
    padding-top: 23vh;
    padding-left: 6vw;
    z-index: 5;
+
+    @media (max-width: 576px) {
+      width: 100%;
+      padding-left: 0;
+      padding-top: 18vh;
+    }
+
+    nav {
+      @media (max-width: 576px) {
+        display: flex;
+        justify-content: center;
+      }
+    }
  }
-&__close {
+
+  &__close {
    position: absolute;
    top: 25px;
    right: 25px;
    cursor: pointer;
    transition: 0.5s all;
-&:hover {
-   transform: rotate(45deg);
- }
-}
-&__list {
-   list-style-type: none;
-   padding-left: 20px;
-   position: relative;
-&:before {
-   content: '';
-   position: absolute;
-   display: block;
-   width: 1px;
-   height: 245px;
-   left: 2px;
-   top: 12px;
-   background: $middle;
- }
-}
 
-&__link  {
+    @media (max-width: 576px) {
+      top: 15px;
+      right: 15px;
+    }
+
+    &:hover {
+       transform: rotate(45deg);
+
+      @media (max-width: 990px) {
+        transform: none;
+      }
+     }
+  }
+
+  &__list {
+     list-style-type: none;
+     padding-left: 20px;
+     position: relative;
+
+    &:before {
+     content: '';
+     position: absolute;
+     display: block;
+     width: 1px;
+     height: 245px;
+     left: 2px;
+     top: 12px;
+     background: $middle;
+     }
+  }
+
+  &__link  {
    margin-bottom: 20px;
    font-size: 20px;
    position: relative;
    transition: 0.6s all;
-&:before {
-   content: '';
-   position: absolute;
-   display: block;
-   transform: translateX(-25px);
-   top: 8px;
-   width: 15px;
-   height: 15px;
-   border-radius: 50%;
-   background: #B6CAD7;
-   transition: 0.6s all;
- }
-&:hover {
-   letter-spacing: 0.104em;
-&:before {
-   background: #C7D4DD;
- }
-}
-a {
-  color: $dark;
-  text-decoration: none;
-  text-transform: uppercase;
-&:hover {
-   text-decoration: none;
- }
-}
-}
 
-&__social {
-   width: 105px;
-   display: flex;
-   justify-content: space-between;
-   position: absolute;
-   bottom: 80px;
-   left: 50%;
-   transform: translateX(-50%);
- }
-&__link-social {
-path {
-  transition: 0.6s all;
-  fill: $dark;
-}
-rect {
-  transition: 0.6s all;
-  fill: $dark;
-}
-&:hover {
-path {
-  fill: $middle;
-}
-rect {
-  fill: $middle;
-}
-}
-}
+    &:before {
+     content: '';
+     position: absolute;
+     display: block;
+     transform: translateX(-25px);
+     top: 8px;
+     width: 15px;
+     height: 15px;
+     border-radius: 50%;
+     background: #B6CAD7;
+     transition: 0.6s all;
+   }
 
-&__overlay {
-   position: fixed;
-   top: 0;
-   left: 0;
-   width: 100%;
-   height: 100vh;
-   background-color: rgba(255, 255, 255, 0.4);
-   z-index: -1;
- }
-}
+    &:hover {
+       letter-spacing: 0.104em;
 
+      @media (max-width: 768px) {
+        letter-spacing: unset;
+      }
 
+      &:before {
+         background: #C7D4DD;
+       }
+    }
 
+    a {
+      color: $dark;
+      text-decoration: none;
+      text-transform: uppercase;
+      &:hover {
+         text-decoration: none;
+       }
+    }
+  }
 
+  &__social {
+     width: 105px;
+     display: flex;
+     justify-content: space-between;
+     position: absolute;
+     bottom: 80px;
+     left: 50%;
+     transform: translateX(-50%);
+   }
 
+  &__link-social {
+    path {
+      transition: 0.6s all;
+      fill: $dark;
+    }
+    rect {
+      transition: 0.6s all;
+      fill: $dark;
+    }
+    &:hover {
+      path {
+        fill: $middle;
 
+        @media (max-width: 768px) {
+          fill: $dark;
+        }
 
+      }
+      rect {
+        fill: $middle;
 
+        @media (max-width: 768px) {
+          fill: $dark;
+        }
+      }
+    }
+  }
 
-
-
+  &__overlay {
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100vh;
+     background-color: rgba(255, 255, 255, 0.4);
+     z-index: -1;
+   }
+  }
 
 </style>
 

@@ -61,11 +61,22 @@
   z-index: 2;
   top: 37vh;
   left: 30px;
+
+  @media (max-width: 990px) {
+    left: 15px;
+  }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+
   .sidepanel__link {
     fill: white;
+
     path {
       transition: 0.4s all;
     }
+
     &:hover {
       path {
         fill: $middle;

@@ -45,6 +45,14 @@ export default {
   background-attachment: fixed;
   transition: 0.5s all;
 
+  @media (max-width: 990px) {
+    padding-left: 50px;
+  }
+
+  @media (max-width: 768px) {
+    padding-left: 0;
+  }
+
   &__wrapper {
     @media (max-width: 1440px) {
       padding-left: 100px;

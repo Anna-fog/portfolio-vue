@@ -162,6 +162,10 @@ export default {
   max-width: 1440px;
   margin: 0 auto;
 
+  @media (max-width: 1440px) {
+    max-width: 1200px;
+  }
+
   &__wrapper {
     display: grid;
     justify-content: center;
@@ -188,6 +192,7 @@ export default {
 
   &__li {
     position: relative;
+
     &:after {
       content: '';
       position: absolute;
@@ -201,6 +206,7 @@ export default {
 
   &__item {
     position: relative;
+
     &:before {
       content: '';
       height: 1px;
@@ -209,15 +215,18 @@ export default {
       background-color: $middle;
       top: 68px;
     }
+
     &-head {
       padding: 47px 0 0 100px;
       position: relative;
     }
+
     &-body {
       padding-left: 43px;
       margin-top: 12px;
       margin-bottom: 0;
     }
+
     &-icon {
       position: absolute;
       top: 50px;
@@ -229,9 +238,11 @@ export default {
         top: 14px;
       }
     }
+
     &-location {
       font-size: 14px;
     }
+
     &-body {
       line-height: 22px;
     }
@@ -248,51 +259,69 @@ export default {
       color: $middle;
     }
   }
-}
 
-// Circles
+  // Circles
 
-.circle-img {
-  position: absolute;
-  right: 570px;
-  top: 14px;
+  .circle-img {
+    position: absolute;
+    right: 570px;
+    top: 14px;
 
-  img {
-    width: 150px;
-    height: 150px;
-    animation: rotate 10s infinite linear;
+    @media (max-width: 1440px) {
+      right: 390px;
+    }
+
+    img {
+      width: 150px;
+      height: 150px;
+      animation: rotate 10s infinite linear;
+    }
+  }
+
+  .circle-small {
+    position: absolute;
+    border-radius: 50%;
+    width: 19px;
+    height: 19px;
+    background-color: $middle;
+    left: 445px;
+    top: 50px;
+
+    @media (max-width: 1440px) {
+      left: 345px;
+    }
+  }
+
+  .circle-middle {
+    position: absolute;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: #D2DDE4;
+    left: 525px;
+    top: -7px;
+
+    @media (max-width: 1440px) {
+      left: 400px;
+    }
+  }
+
+  .circle-large {
+    position: absolute;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    background-color: #F2F7FA;
+    left: 620px;
+    top: 100px;
+
+    @media (max-width: 1440px) {
+      left: 500px;
+    }
   }
 }
 
-.circle-small {
-  position: absolute;
-  border-radius: 50%;
-  width: 19px;
-  height: 19px;
-  background-color: $middle;
-  left: 445px;
-  top: 50px;
-}
 
-.circle-middle {
-  position: absolute;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  background-color: #D2DDE4;
-  left: 525px;
-  top: -7px;
-}
-
-.circle-large {
-  position: absolute;
-  border-radius: 50%;
-  width: 80px;
-  height: 80px;
-  background-color: #F2F7FA;
-  left: 620px;
-  top: 100px;
-}
 
 
 </style>
