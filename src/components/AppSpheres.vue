@@ -166,12 +166,51 @@ export default {
     max-width: 1200px;
   }
 
+  @media (max-width: 1200px) {
+    max-width: 990px;
+  }
+
+  @media (max-width: 990px) {
+    max-width: 768px;
+  }
+
+  @media (max-width: 768px) {
+    padding-top: 60px;
+    max-width: 576px;
+  }
+
+  @media (max-width: 576px) {
+    max-width: 560px;
+    padding-top: 40px;
+  }
+
   &__wrapper {
     display: grid;
     justify-content: center;
     grid-template-columns: repeat(2, 400px);
     padding: 50px 65px 0 65px;
     column-gap: 130px;
+
+    @media (max-width: 1200px) {
+      grid-template-columns: repeat(2,375px);
+      column-gap: 80px;
+    }
+
+    @media (max-width: 990px) {
+      grid-template-columns: repeat(2,275px);
+      column-gap: 40px
+    }
+
+    @media (max-width: 768px) {
+      grid-template-columns: minmax(490px, auto);
+      row-gap: 40px;
+      justify-content: center;
+    }
+
+    @media (max-width: 576px) {
+      padding: 40px 0 0 0;
+      grid-template-columns: minmax(270px, auto);
+    }
   }
 
   &__column-subtitle {
@@ -214,17 +253,29 @@ export default {
       position: absolute;
       background-color: $middle;
       top: 68px;
+
+      @media (max-width: 576px) {
+        width: 30px;
+      }
     }
 
     &-head {
       padding: 47px 0 0 100px;
       position: relative;
+
+      @media (max-width: 576px) {
+        padding: 40px 0 0 85px;
+      }
     }
 
     &-body {
       padding-left: 43px;
       margin-top: 12px;
       margin-bottom: 0;
+
+      @media (max-width: 576px) {
+        padding-left: 30px;
+      }
     }
 
     &-icon {
@@ -232,6 +283,11 @@ export default {
       top: 50px;
       left: 44px;
       @include before-circle;
+
+      @media (max-width: 576px) {
+        left: 30px;
+      }
+
       img {
         position: absolute;
         left: 17px;
@@ -255,8 +311,14 @@ export default {
   &__link {
     color: $dark;
     transition: .4s all;
+
     &:hover {
       color: $middle;
+
+      @media (max-width: 990px) {
+        grid-template-columns: repeat(2,275px);
+        column-gap: 40px
+      }
     }
   }
 
@@ -271,10 +333,32 @@ export default {
       right: 390px;
     }
 
+    @media (max-width: 1200px) {
+      right: 290px;
+    }
+
+    @media (max-width: 990px) {
+      right: 190px;
+    }
+
+    @media (max-width: 768px) {
+      right: 90px;
+    }
+
+    @media (max-width: 576px) {
+      top: -25px;
+      right: 25px;
+    }
+
     img {
       width: 150px;
       height: 150px;
       animation: rotate 10s infinite linear;
+
+      @media (max-width: 576px) {
+        width: 105px;
+        height: 105px;
+      }
     }
   }
 
@@ -290,6 +374,25 @@ export default {
     @media (max-width: 1440px) {
       left: 345px;
     }
+
+    @media (max-width: 1200px) {
+      left: 245px;
+    }
+
+    @media (max-width: 990px) {
+      left: 145px;
+    }
+
+    @media (max-width: 768px) {
+      left: 45px;
+    }
+
+    @media (max-width: 576px) {
+      display: none;
+      left: 20px;
+      width: 15px;
+      height: 15px;
+    }
   }
 
   .circle-middle {
@@ -304,6 +407,25 @@ export default {
     @media (max-width: 1440px) {
       left: 400px;
     }
+
+    @media (max-width: 1200px) {
+      left: 300px;
+    }
+
+    @media (max-width: 990px) {
+      left: 200px;
+    }
+
+    @media (max-width: 768px) {
+      left: 100px;
+    }
+
+    @media (max-width: 576px) {
+      left: 45px;
+      top: -8px;
+      width: 30px;
+      height: 30px;
+    }
   }
 
   .circle-large {
@@ -317,6 +439,25 @@ export default {
 
     @media (max-width: 1440px) {
       left: 500px;
+    }
+
+    @media (max-width: 1200px) {
+      left: 400px;
+    }
+
+    @media (max-width: 990px) {
+      left: 300px;
+    }
+
+    @media (max-width: 768px) {
+      left: 200px;
+    }
+
+    @media (max-width: 576px) {
+      left: 110px;
+      top: 64px;
+      width: 60px;
+      height: 60px;
     }
   }
 }

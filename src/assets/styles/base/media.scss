@@ -41,25 +41,25 @@
   //  }
   //}
 
-  .spheres {
-    max-width: 990px;
-    &__wrapper {
-      grid-template-columns: repeat(2,375px);
-      column-gap: 80px;
-    }
-    .circle-img {
-      right: 290px;
-    }
-    .circle-large {
-      left: 400px;
-    }
-    .circle-middle {
-      left: 300px;
-    }
-    .circle-small {
-      left: 245px;
-    }
-  }
+  //.spheres {
+  //  max-width: 990px;
+  //  &__wrapper {
+  //    grid-template-columns: repeat(2,375px);
+  //    column-gap: 80px;
+  //  }
+  //  .circle-img {
+  //    right: 290px;
+  //  }
+  //  .circle-large {
+  //    left: 400px;
+  //  }
+  //  .circle-middle {
+  //    left: 300px;
+  //  }
+  //  .circle-small {
+  //    left: 245px;
+  //  }
+  //}
 
   .skills {
     &__wrapper {
@@ -178,30 +178,31 @@
   //  }
   //}
 
-  .spheres {
-    max-width: 768px;
-    &__wrapper {
-      grid-template-columns: repeat(2,275px);
-      column-gap: 40px;
-    }
-    .circle-img {
-      right: 190px;
-    }
-    .circle-large {
-      left: 300px;
-    }
-    .circle-middle {
-      left: 200px;
-    }
-    .circle-small {
-      left: 145px;
-    }
-    &__link {
-      &:hover {
-        color: $dark;
-      }
-    }
-  }
+  //.spheres {
+  //  max-width: 768px;
+  //  &__wrapper {
+  //    grid-template-columns: repeat(2,275px);
+  //    column-gap: 40px;
+  //  }
+  //  .circle-img {
+  //    right: 190px;
+  //  }
+  //  .circle-large {
+  //    left: 300px;
+  //  }
+  //  .circle-middle {
+  //    left: 200px;
+  //  }
+  //  .circle-small {
+  //    left: 145px;
+  //  }
+  //  &__link {
+  //    &:hover {
+  //      grid-template-columns: repeat(2,275px);
+  //      column-gap: 40px
+  //    }
+  //  }
+  //}
 
   .skills {
     &__wrapper {
@@ -333,27 +334,27 @@
   //  }
   //}
 
-  .spheres {
-    padding-top: 60px;
-    max-width: 576px;
-    &__wrapper {
-      grid-template-columns: minmax(490px, auto);
-      row-gap: 40px;
-      justify-content: center;
-    }
-    .circle-img {
-      right: 90px;
-    }
-    .circle-large {
-      left: 200px;
-    }
-    .circle-middle {
-      left: 100px;
-    }
-    .circle-small {
-      left: 45px;
-    }
-  }
+  //.spheres {
+  //  padding-top: 60px;
+  //  max-width: 576px;
+  //  &__wrapper {
+  //    grid-template-columns: minmax(490px, auto);
+  //    row-gap: 40px;
+  //    justify-content: center;
+  //  }
+  //  .circle-img {
+  //    right: 90px;
+  //  }
+  //  .circle-large {
+  //    left: 200px;
+  //  }
+  //  .circle-middle {
+  //    left: 100px;
+  //  }
+  //  .circle-small {
+  //    left: 45px;
+  //  }
+  //}
 
   //.circles-2 {
   //  &_skills {
@@ -532,54 +533,54 @@
   //  }
   //}
 
-  .spheres {
-    max-width: 560px;
-    padding-top: 40px;
-    &__wrapper {
-      padding: 40px 0 0 0;
-      grid-template-columns: minmax(270px, auto);
-    }
-    &__item {
-      &:before {
-        width: 30px;
-      }
-    }
-    &__item-icon {
-      left: 30px;
-    }
-    &__item-head {
-      padding: 40px 0 0 85px;
-    }
-    &__item-body {
-      padding-left: 30px;
-    }
-    .circle-img {
-      top: -25px;
-      right: 25px;
-      img {
-        width: 105px;
-        height: 105px;
-      }
-    }
-    .circle-large {
-      left: 110px;
-      top: 64px;
-      width: 60px;
-      height: 60px;
-    }
-    .circle-middle {
-      left: 45px;
-      top: -8px;
-      width: 30px;
-      height: 30px;
-    }
-    .circle-small {
-      display: none;
-      left: 20px;
-      width: 15px;
-      height: 15px;
-    }
-  }
+  //.spheres {
+  //  max-width: 560px;
+  //  padding-top: 40px;
+  //  &__wrapper {
+  //    padding: 40px 0 0 0;
+  //    grid-template-columns: minmax(270px, auto);
+  //  }
+  //  &__item {
+  //    &:before {
+  //      width: 30px;
+  //    }
+  //  }
+  //  &__item-icon {
+  //    left: 30px;
+  //  }
+  //  &__item-head {
+  //    padding: 40px 0 0 85px;
+  //  }
+  //  &__item-body {
+  //    padding-left: 30px;
+  //  }
+  //  .circle-img {
+  //    top: -25px;
+  //    right: 25px;
+  //    img {
+  //      width: 105px;
+  //      height: 105px;
+  //    }
+  //  }
+  //  .circle-large {
+  //    left: 110px;
+  //    top: 64px;
+  //    width: 60px;
+  //    height: 60px;
+  //  }
+  //  .circle-middle {
+  //    left: 45px;
+  //    top: -8px;
+  //    width: 30px;
+  //    height: 30px;
+  //  }
+  //  .circle-small {
+  //    display: none;
+  //    left: 20px;
+  //    width: 15px;
+  //    height: 15px;
+  //  }
+  //}
 
   .skills {
     padding-bottom: 80px;
